@@ -18,19 +18,40 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item active ml-2">
+                    <a class="nav-link" href="{{route('add-employee')}}">Add Employee</a>
+                </li>
             </ul>
         </div>
     </nav>
-
-    <table border="1" width="980" align="center">
+    <div class="mt-4" align="center">
+        <h4 class="text-center text-success">All Employee List With Details</h4>
+    </div>
+    <table class="mt-3 text-center" border="1"  align="center">
         <tr>
             <th>SL No</th>
             <th>Employee Name</th>
             <th>Employee E-mail</th>
             <th>Employee Mobile</th>
-            <th></th>
-            <th></th>
+            <th>Employee Dept.</th>
+            <th>Employee Religion</th>
+            <th>Employee Status</th>
+            <th>Employee District</th>
+            <th>Employee Action</th>
+        </tr>
+        <tr>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>Demo</td>
+            <td>
+                <a class="btn btn-sm btn-outline-warning" href="">Edit</a>
+                <a class="btn btn-sm btn-outline-danger" href="">Delete</a>
+            </td>
         </tr>
         <tr></tr>
     </table>

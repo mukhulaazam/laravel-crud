@@ -11,7 +11,17 @@
 |
 */
 
-Route::get('/', [
+Route::get('/view-employee', [
    'uses'   => 'EmployeeController@basePath',
-   'as'     => '/'
+   'as'     => 'view-employee'
+]);
+
+Route::get('/add-employee', [
+   'uses'   => 'EmployeeController@addEmployee',
+   'as'     => 'add-employee'
+]);
+//This is the function for create or insert data to database route
+Route::post('/new-employee', [
+   'uses'   => 'EmployeeController@newEmployee',
+   'as'     => 'new-employee'
 ]);
