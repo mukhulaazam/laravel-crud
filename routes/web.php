@@ -25,3 +25,16 @@ Route::post('/new-employee', [
    'uses'   => 'EmployeeController@newEmployee',
    'as'     => 'new-employee'
 ]);
+Route::get('/edit-employee/{id}', [
+   'uses'   => 'EmployeeController@editEmployee',
+   'as'     => 'edit-employee'
+]);
+
+Route::post('/update-employee', [
+   'uses'   => 'EmployeeController@updateEmployee',
+   'as'     => 'update-employee'
+]);
+Route::get('/delete-employee/{id}', [
+    'uses'  => 'EmployeeController@deleteEmployee',
+    'as'    => 'delete-employee'
+]);

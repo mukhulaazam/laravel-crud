@@ -39,20 +39,23 @@
             <th>Employee District</th>
             <th>Employee Action</th>
         </tr>
+        @php($i=1);
+        @foreach($employees as $employee)
         <tr>
-            <td>Demo</td>
-            <td>Demo</td>
-            <td>Demo</td>
-            <td>Demo</td>
-            <td>Demo</td>
-            <td>Demo</td>
-            <td>Demo</td>
-            <td>Demo</td>
+            <td>{{$i++}}</td>
+            <td>{{$employee->name}}</td>
+            <td>{{$employee->email}}</td>
+            <td>{{$employee->mobile}}</td>
+            <td>{{$employee->dept}}</td>
+            <td>{{$employee->religion}}</td>
+            <td>{{$employee->status}}</td>
+            <td>{{$employee->district}}</td>
             <td>
-                <a class="btn btn-sm btn-outline-warning" href="">Edit</a>
-                <a class="btn btn-sm btn-outline-danger" href="">Delete</a>
+                <a class="btn btn-sm btn-outline-warning" href="{{route('edit-employee', ['id' => $employee->id])}}">Edit</a>
+                <a class="btn btn-sm btn-outline-danger" href="{{route('delete-employee', ['id' => $employee->id])}}">Delete</a>
             </td>
         </tr>
+        @endforeach
         <tr></tr>
     </table>
 
